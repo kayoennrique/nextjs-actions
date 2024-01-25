@@ -1,11 +1,14 @@
 {
   "name": "nextjs-actions",
+  "type": "module",
   "version": "1.0.0",
   "main": "index.js",
   "author": "kayoennrique",
   "license": "MIT",
   "dependencies": {
+    "eslint-plugin-prettier": "^4.0.0",
     "next": "^12.1.6",
+    "node-fetch": "^3.2.5",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
@@ -15,7 +18,9 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "deploy:prod": "yarn build && vercel ./build --confirm --no-clipboard --token=$VERCEL_TOKEN --prod"
+    "deploy:prod": "yarn deploy:staging --prod",
+    "deploy:staging": "yarn build && vercel ./build --confirm --no-clipboard --token=$VERCEL_TOKEN",
+    "deploy:preview": "node ./scripts/pullRequestPreview"
   },
   "devDependencies": {
     "eslint": "8.17.0",
