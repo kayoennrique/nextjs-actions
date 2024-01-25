@@ -1,26 +1,18 @@
 {
-  "name": "nextjs-actions",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "kayoennrique",
-  "license": "MIT",
-  "dependencies": {
-    "eslint-plugin-prettier": "^5.1.3",
-    "next": "^14.0.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "scripts": {
-    "dev": "next dev",
-    "build": "rm -rf build && next export && mv ./out ./build",
-    "start": "next start",
-    "lint": "next lint",
-    "lint:fix": "next lint --fix"
-  },
-  "devDependencies": {
-    "eslint": "8.56.0",
-    "eslint-config-next": "14.0.4",
-    "eslint-config-prettier": "^9.1.0",
-    "prettier": "^3.2.4"
-  }
+    "name": "nextjs-actions",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "kayoennrique",
+    "license": "MIT",
+    "dependencies": {
+        "next": "^12.1.6",
+        "react": "^18.1.0",
+        "react-dom": "^18.1.0"
+    },
+    "scripts": {
+        "dev": "next dev",
+        "build": "rm -rf build && next build && next export && mv ./out ./build",
+        "start": "next start",
+        "lint": "next lint"
+    }
 }
