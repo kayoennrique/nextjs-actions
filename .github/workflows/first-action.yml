@@ -1,17 +1,17 @@
-name: "CI (Integração Continua): Primeira Action"
+name: "CI (Integração Continua): Segunda Action"
 
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  # Ativa esse fluxo de trabalho para cada push ou pull que aconetcer apontando para a branch "main"
+  # Triggers the workflow on push or pull request events but only for the "develop" branch
+  # Ativa esse fluxo de trabalho para cada push ou pull que aconetcer apontando para a branch "develop"
   push:
-    branches: [ "main" ]
+    branches: [ "develop" ]
   pull_request:
     types: [opened, synchronize]
 
 
 # Definindo o que queremos executar
 jobs:
-  exemplo: # Job: exemplo
+  example: # Job: example
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
