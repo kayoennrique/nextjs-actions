@@ -42,6 +42,10 @@ fetch(
     if (response.ok) return response.json();
     throw new Error(response.statusText);
   })
+  .catch((err) => {
+    console.log("[COMMENT_ON_GITHUB: ERROR]");
+    throw new Error(err);
+  })
   .finally(() => {
     console.log("[COMMENT_ON_GITHUB: END]");
   });
